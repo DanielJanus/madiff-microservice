@@ -8,7 +8,7 @@ The service supports different card types (Prepaid, Debit, Credit) and card stat
 
 API Endpoint:
 ```html
-GET /api/cardactions/allowed?userId={userId}&cardNumber={cardNumber}
+GET /api/CardActions/{UserId}/{CardNumber}/allowed
 ```
 
 Returns a JSON list of allowed actions for the given card.
