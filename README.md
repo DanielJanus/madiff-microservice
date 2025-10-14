@@ -40,6 +40,6 @@ New card types or statuses can be supported by updating the conditions in the ru
 ## Getting Started
 
 Clone the repository:
-1. git clone <repository-url>
+1. git clone https://github.com/DanielJanus/madiff-microservice.git
 2. Build the project using .NET 8.
 3. Run the service and call the API endpoint to retrieve allowed card actions.
