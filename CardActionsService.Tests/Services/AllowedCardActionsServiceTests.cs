@@ -6,8 +6,12 @@ namespace CardActionsService.Tests.Services;
 
 public class AllowedActionsServiceTests
 {
-    private readonly AllowedCardActionsService _service = new();
-
+    private readonly AllowedCardActionsService _service;
+    public AllowedActionsServiceTests()
+    {
+        var logger = Microsoft.Extensions.Logging.Abstractions.NullLogger<AllowedCardActionsService>.Instance;
+        _service = new AllowedCardActionsService(logger);
+    }
     [Theory]
     // Prepaid
     [InlineData(CardType.Prepaid, CardStatus.Ordered, false, new[] { "ACTION3","ACTION4","ACTION7","ACTION8","ACTION9","ACTION10","ACTION12","ACTION13" })]

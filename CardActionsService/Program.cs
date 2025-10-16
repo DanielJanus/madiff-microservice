@@ -1,4 +1,5 @@
 using System.Text.Json;
+using CardActionsService.Middlewares;
 using CardActionsService.Services;
 using Microsoft.AspNetCore.Diagnostics;
 
@@ -33,7 +34,7 @@ app.UseExceptionHandler(errorApp =>
 
 
 app.UseHttpsRedirection();
-
+app.UseMiddleware<ErrorHandlingMiddleware>();
 app.MapControllers();
 
 app.Run();
